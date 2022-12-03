@@ -2,11 +2,86 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="ithinkigotit.css"></link>
+    <link rel="shortcut icon" href="#">
+    <script src="https://cdn.jsdelivr.net/npm/@tonaljs/tonal/browser/tonal.min.js"></script>
+    <script>
+
+        function diatonicHarmony(toniC,sCale,scaleDegrees,chordNames){
+            let tonic = ("B");
+            let scale = ("Arabian");
+
+                if (scale=="Major"){
+                    scaleDegrees = (Tonal.Progression.fromRomanNumerals(tonic,["","IM7","IIm11","IIIm11","IVM7","V7","VIm11","VIIm11"]));
+                }else if (scale=="Minor"){
+                    scaleDegrees = (Tonal.Progression.fromRomanNumerals(tonic,["","Im11","IIm13","bIII13","IVm11","V7","bVIM7","bVII°"]));
+                }else if (scale=="Harmonic Minor"){
+                    scaleDegrees = (Tonal.Progression.fromRomanNumerals(tonic,["","Im11","IIm13","bIII13","IVm11","V7","VIM7","VII°7"]));
+                }else if (scale=="Whole Tone Minor"){
+                    scaleDegrees = (Tonal.Progression.fromRomanNumerals(tonic,["","Im11","IIm11","IIIm11","bVm11","bVIm11","bVIIm11"]));
+                }else if (scale=="Arabian"){
+                    scaleDegrees = (Tonal.Progression.fromRomanNumerals(tonic,["","Im11","IIm11","IIIm11","IVm11","bVm11","bVIm11","bVIIm11"]))
+                }
+            return scaleDegrees; 
+        }
+
+
+        jaZZchords = diatonicHarmony()
+
+
+
+
+        //function sOlver(){
+            for (i=1;i<=7; i++){
+                allChordsSpelldOut = Tonal.Chord.get(jaZZchords[i]).notes;
+                console.log(allChordsSpelldOut);
+            }
+
+
+
+            console.log(jaZZchords);
+            
+
+  
+
+        //}
+
+        //eVerYChord = sOlver();
+
+
+        //console.log(allChordsSpelldOut);
+
+//        console.log(eVerYChord);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //let allChordsSpelldOut = (Tonal.Chord.get(${scaleDegrees}).notes);
+
+
+
+
+
+
+    </script>
+    <script>
+
+    </script>
 </head>
 <body>
-    
+    <div></div>
 </body>
 </html>
